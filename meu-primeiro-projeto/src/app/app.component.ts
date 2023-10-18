@@ -48,4 +48,16 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
       console.log("ngAfterViewChecked");
       console.log("---------------------------------")
   }
+
+  public addValue: number = 0
+
+  add(){
+    this.addValue ++
+  }
+
+  public getDados: {nome: string, idade: number} | undefined
+
+  public setDados(evento: {nome: string, idade: number}){
+    this.getDados = evento
+  }
 }
